@@ -1,0 +1,173 @@
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.heading{
+    font-size: 70px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    text-shadow: 6px 3px 4px #111111;
+    
+}
+body{
+    background-repeat: no-repeat;
+    background-color: #2B4B82;
+    background-size:cover;
+    color:#94DDDE ;
+    font-family: 'Orbitron', sans-serif;
+    
+}
+#ntpd{
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 120px;
+    height: 120px;
+    box-shadow: 0px 0px 0px black;
+    border-radius: 20%;
+}
+div{
+    display: flex;
+}
+#main{
+    background-color: #94DDDE;
+    height: 407px;
+    width : 760px;
+    margin-top: 70px;
+    margin-left: 70px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 4px  #111111;
+    border-radius: 7px;
+    position: relative;
+    
+}
+
+#input-task{
+    height: 34px;
+    width: 470px;
+    font-family: 'Orbitron', sans-serif;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 30px;
+    border-radius: 7px;
+    border: 2px solid black;
+
+}
+
+#date{
+    width:130px;
+    
+    height:52px;
+    font-family: 'Orbitron', sans-serif;
+    padding-top: 05px 10px;
+    margin-top: 20px;
+    margin-left: 40px;
+    border-radius: 7px;
+    border: 2px solid black;
+
+
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+.button{
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+    padding-top: 10px 10px;
+    margin-top: 12px;
+    margin-left:100px ;
+    height:52px;
+    width: 180px;
+    text-align: center;
+    scroll-behavior: smooth;
+    align-self: center;
+    border-radius: 7px;
+    border: 2px solid black;
+
+}
+.button:hover {
+    background-color: #354d85; /* Green */
+    color: rgba(2, 2, 2, 0.993);
+    box-shadow: 2px 2px 4px  #111111;
+    cursor:pointer;
+  }
+#search{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 7px;
+
+}
+.output{
+    background-color: rgb(237, 240, 243);
+    align-self: flex-start;
+    margin:30px;
+    width: 650px;
+    height: 300px;
+    margin-top: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    color: black;
+    border: 2px solid black;
+
+}
+.list{
+    margin: 10px;
+}
+
+#phone{
+    height:600px;
+    background-image: url(images/ph3.png);
+    background-repeat: no-repeat;
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 330px;
+    background-size: cover;
+    
+    
+}
+.layout{
+    display: flex;
+    flex-direction: column;
+}
+.todo-list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 1px;
+    margin-left: 30px;
+    
+}
+.newItem{  
+    margin-left: 7px;
+    margin-bottom: 14px;
+    background-color: #dffafa;
+    padding:3px;
+    margin-right: 0px;
+    justify-content: space-between;
+}
+
+.todo-list li{
+    flex: 1;
+}
+
+.del-btn,.check-btn{
+   margin-left: 7px;
+   height: 30px;
+   width: 40px;
+   cursor: pointer;
+}
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+.crossed{
+    opacity: 0.5;
+    text-decoration: line-through;
+}
