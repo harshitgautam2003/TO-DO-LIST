@@ -35,15 +35,14 @@ div{
 }
 #main{
     background-color: #94DDDE;
-    height: 407px;
+    height: fit-content;
     width : 760px;
     margin-top: 70px;
     margin-left: 70px;
     border-radius: 20px;
     box-shadow: 5px 5px 4px  #111111;
     border-radius: 7px;
-    position: relative;
-    
+    position: relative;    
 }
 
 #input-task{
@@ -109,7 +108,7 @@ div{
     align-self: flex-start;
     margin:30px;
     width: 650px;
-    height: 300px;
+    height: fit-content;
     margin-top: 15px;
     border-radius: 10px;
     padding: 10px;
