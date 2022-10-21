@@ -13,7 +13,7 @@ function addTask(){
     todoDiv.classList.add("todo");
     
     const newTask=document.createElement('li');
-    newTask.textContent=inputTask.value+" || "+inputDate.value;
+    newTask.textContent=inputTask.value+"---"+inputDate.value;
     newTask.classList.add('newItem');
     todoDiv.appendChild(newTask);
 
@@ -39,6 +39,7 @@ function delCheck(e){
     if(item.classList[0]==="del-btn"){
         const todo=item.parentElement;
         todo.remove();
+        clearLocalstorage(todo);
     }
     if(item.classList[0]==="check-btn"){
         const todo=item.parentElement;
@@ -92,4 +93,16 @@ function getTasks(){
 
     taskS.appendChild(todoDiv);
    });
+}
+function clearLocalstorage(todo){
+    let todoList;
+    if(localStorage.getItem("todoList")===null){
+        todoList=[];
+   }
+   else{
+    todoList=JSON.parse(localStorage.getItem("todoList"));
+   }
+   const todoIndex=todo.children[0].innerText;
+   todoList.splice(todoList.indexOf(todoIndex),1);
+   localStorage.setItem("todoList",JSON.stringify(todoList));
 }
