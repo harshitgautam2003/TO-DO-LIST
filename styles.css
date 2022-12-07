@@ -91,7 +91,7 @@ div{
 
 }
 .button:hover {
-    background-color: #354d85; /* Green */
+    background-color: #354d85; 
     color: rgba(2, 2, 2, 0.993);
     box-shadow: 2px 2px 4px  #111111;
     cursor:pointer;
