@@ -119,17 +119,37 @@ div{
 .list{
     margin: 10px;
 }
-
 #phone{
-    height:600px;
-    background-image: url(images/ph3.png);
+    height:650px;
     background-repeat: no-repeat;
     margin-left: 100px;
     margin-top: 50px;
-    width: 330px;
+    width: 300px;
     background-size: cover;
-    
-    
+    position: relative;   
+}
+#oldT{
+    color: #2B4B82;
+    position: absolute;
+    top: 90px;
+    left: 160px;
+    width: max-content;
+    font-size: 30px;
+    font-weight: 700;
+    border-bottom: #2B4B82;
+}
+#oldInpt{
+    position: absolute;
+    top:160px;
+    left: 80px;
+    width: 360px;
+    height: fit-content;
+    background-color: F8F0F0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 1px;
+    margin-left: 30px;
 }
 .layout{
     display: flex;

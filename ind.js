@@ -1,19 +1,22 @@
 const inputTask=document.querySelector("#input-task");
-const inputDate=document.querySelector("#date")
+const inputDate=document.querySelector("#date");
 const taskS=document.querySelector(".todo-list");
-const submitButton=document.querySelector("#submit")
-const clearButton=document.querySelector("#clear")
+const oldInput=document.querySelector("#oldInpt");
+const submitButton=document.querySelector("#submit");
+const clearButton=document.querySelector("#clear");
 
 document.addEventListener("DOMContentLoaded",getTasks)
 submitButton.addEventListener("click",addTask)
 clearButton.addEventListener("click",cleaR)
 taskS.addEventListener('click',delCheck);
+
+
 function addTask(){
     const todoDiv=document.createElement("div");
     todoDiv.classList.add("todo");
     
     const newTask=document.createElement('li');
-    newTask.textContent=inputTask.value+"---"+inputDate.value;
+    newTask.textContent=inputTask.value+"   DATE:-"+inputDate.value;
     newTask.classList.add('newItem');
     todoDiv.appendChild(newTask);
 
@@ -71,27 +74,25 @@ function getTasks(){
     todoList=JSON.parse(localStorage.getItem("todoList"));
    }
    todoList.forEach(function (todo) {
-    const todoDiv=document.createElement("div");
-    todoDiv.classList.add("todo");
-    
-    const newTask=document.createElement('li');
-    newTask.textContent=todo;
-    newTask.classList.add('newItem');
-    todoDiv.appendChild(newTask);
+        const todoDiv=document.createElement("div");
+        todoDiv.classList.add("todo");
+        
+        const newTask=document.createElement('li');
+        newTask.textContent=todo;
+        newTask.classList.add('newItem');
+        todoDiv.appendChild(newTask);
 
-    
+        const checkButton=document.createElement('button');
+        checkButton.innerHTML='<i class="fas fa-check"></i>'
+        checkButton.classList.add("check-btn");
+        todoDiv.appendChild(checkButton);
 
-    const checkButton=document.createElement('button');
-    checkButton.innerHTML='<i class="fas fa-check"></i>'
-    checkButton.classList.add("check-btn");
-    todoDiv.appendChild(checkButton);
+        const delButton=document.createElement('button');
+        delButton.innerHTML='<i class="fas fa-trash"></i>'
+        delButton.classList.add("del-btn");
+        todoDiv.appendChild(delButton);
 
-    const delButton=document.createElement('button');
-    delButton.innerHTML='<i class="fas fa-trash"></i>'
-    delButton.classList.add("del-btn");
-    todoDiv.appendChild(delButton);
-
-    taskS.appendChild(todoDiv);
+        oldInput.appendChild(todoDiv);
    });
 }
 function clearLocalstorage(todo){
