@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded",getTasks)
 submitButton.addEventListener("click",addTask)
 clearButton.addEventListener("click",cleaR)
 taskS.addEventListener('click',delCheck);
-
+oldInput.addEventListener('click',delCheck);
 
 function addTask(){
     const todoDiv=document.createElement("div");
@@ -37,19 +37,7 @@ function addTask(){
     inputDate.value="";
 
 }
-function delCheck(e){
-    const item=e.target;
-    if(item.classList[0]==="del-btn"){
-        const todo=item.parentElement;
-        todo.remove();
-        clearLocalstorage(todo);
-    }
-    if(item.classList[0]==="check-btn"){
-        const todo=item.parentElement;
-        todo.classList.toggle("crossed");
-    }
 
-}
 function cleaR(){
     taskS.textContent=null;
 }
@@ -64,6 +52,19 @@ function saveLocal(todo){
    }
    todoList.push(todo);
    localStorage.setItem("todoList",JSON.stringify(todoList));
+}
+function delCheck(e){
+    const item=e.target;
+    if(item.classList[0]==="del-btn"){
+        const todo=item.parentElement;
+        todo.remove();
+        clearLocalstorage(todo);
+    }
+    if(item.classList[0]==="check-btn"){
+        const todo=item.parentElement;
+        todo.classList.toggle("crossed");
+    }
+
 }
 function getTasks(){
     let todoList;
